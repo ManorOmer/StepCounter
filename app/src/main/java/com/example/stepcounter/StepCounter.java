@@ -60,7 +60,7 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
             double magnitudeDelta = magnitude - previousMagnitude;
             previousMagnitude = magnitude;
 
-            if(magnitudeDelta > 10 && magnitudeDelta < 13){
+            if(magnitudeDelta > 8 && magnitudeDelta < 13){
                 stepCount++;
             }
 
