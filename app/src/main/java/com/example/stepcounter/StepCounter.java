@@ -19,10 +19,10 @@ import org.w3c.dom.Text;
 public class StepCounter extends AppCompatActivity implements SensorEventListener {
 
     private SensorManager sensorManager;
-    private Sensor stepSensor;
-    private boolean running = false;
-    private int totalSteps = 0;
-    private int previousTotalSteps = 0;
+    //private Sensor stepSensor;
+    //private boolean running = false;
+    //private int totalSteps = 0;
+    //private int previousTotalSteps = 0;
     private TextView tvSteps;
     private double previousMagnitude = 0;
     private int stepCount = 0;
@@ -64,8 +64,11 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
                 stepCount++;
             }
 
+            if(magnitudeDelta > highestMagnitude){
+                highestMagnitude = magnitudeDelta;
+                Log.d("KELEV", "Highest Magnitude yet: " + highestMagnitude);
+            }
             tvSteps.setText(String.valueOf(stepCount));
-
         }
     }
 }
