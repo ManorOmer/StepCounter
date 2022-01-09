@@ -2,6 +2,7 @@ package com.example.stepcounter;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -117,7 +118,8 @@ public class Register extends AppCompatActivity {
                                                 Toast.makeText(Register.this, "User Has Been registered to system!", Toast.LENGTH_LONG).show();
                                             }
                                             else{
-                                                Toast.makeText(Register.this, "User registration has been failed!" + email, Toast.LENGTH_LONG).show();
+                                                Toast.makeText(Register.this, "User registration has been failed!", Toast.LENGTH_LONG).show();
+                                                Log.d("kelev", email + password);
                                             }
                                         }
                                     });

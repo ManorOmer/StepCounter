@@ -28,6 +28,11 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
     private int stepCount = 0;
     private double highestMagnitude = 0;
 
+    //מחשב את המינימום והמקסימום לווקטור תלוי גובה המשתמש
+
+    private double maxMagnitude = InsertHeight.getHeightMeter() * 8;
+    private double minMagnitude = InsertHeight.getHeightMeter() * 3.5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,7 +65,7 @@ public class StepCounter extends AppCompatActivity implements SensorEventListene
             double magnitudeDelta = magnitude - previousMagnitude;
             previousMagnitude = magnitude;
 
-            if(magnitudeDelta > 8 && magnitudeDelta < 13){
+            if(magnitudeDelta > minMagnitude && magnitudeDelta < maxMagnitude){
                 stepCount++;
             }
 
