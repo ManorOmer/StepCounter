@@ -25,6 +25,9 @@
             android:name=".StepCounter"
             android:label="@string/app_name" >
         </activity>
-
+        <activity
+            android:name=".InsertHeight"
+            android:label="Setp Counter">
+        </activity>
     </application>
 </manifest>
